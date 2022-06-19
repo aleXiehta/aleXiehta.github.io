@@ -83,7 +83,7 @@ author:
   name             : "Tsun-An Hsieh"
   avatar           : "Tsun-An.jpg"
   bio              : "I am a Ph.D. student who joined SAIGE starting in 2022. Before joining IU, I worked as a research assistant at Academia Sinica, Taiwan, focusing on speech-related applications. As a student at the ISE department, I devote myself to incorporating modern machine learning algorithms into conventional speech and audio problems, such as speech enhancement, dereverberation, and synthesis. "
-  location         : "Location"
+  location         : 
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com.tw/citations?hl=zh-TW&user=FWqLt5QAAAAJ"
