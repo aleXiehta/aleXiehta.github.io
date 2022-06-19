@@ -17,9 +17,8 @@ Education
 
 Work experience
 ======
-* Summer 2014: Research Intern
-  * Institute for Information Science, Academia Sinica
-  * Duties included: Development of the Taiwanese speech and text multi-purpose corpus platform
+* 2019-2022: Research Assistant
+  * Institute for Information Science, Academia Sinica 
   * Supervisor: [Dr. Yu Tsao](https://www.citi.sinica.edu.tw/pages/yu.tsao/index_en.html)
 
 * Summer 2014: Research Intern
