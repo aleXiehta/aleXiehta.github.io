@@ -9,8 +9,8 @@
 locale                   : "en-US"
 title                    : "Tsun-An Hsieh"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
+name                     : &name "Tsun-An Hsieh"
+description              : &description ""
 url                      : https://aleXiehta.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "aleXiehta/aleXiehta.github.io"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Tsun-An Hsieh"
   avatar           : "Tsun-An.jpg"
-  bio              : "I am a Ph.D. student who joined SAIGE starting in 2022. Before joining IU, I worked as a research assistant at Academia Sinica, Taiwan, focusing on speech-related applications. As a student at the ISE department, I devote myself to incorporating modern machine learning algorithms into conventional speech and audio problems, such as speech enhancement, dereverberation, and synthesis. "
+  bio              : 
   location         : 
   employer         :
   pubmed           : 
