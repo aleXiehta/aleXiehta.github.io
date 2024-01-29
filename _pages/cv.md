@@ -23,7 +23,7 @@ Work experience
 
 * May-Aug 2023: Research Scientist Intern
   * Reality Labs Research Audio, Meta 
-  * Supervisor: [Dr. Ashutosh Pandey]
+  * Supervisor: Dr. Ashutosh Pandey
 
 * 2019-2022: Research Assistant
   * Institute for Information Science, Academia Sinica 
