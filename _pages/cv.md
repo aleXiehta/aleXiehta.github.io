@@ -11,15 +11,21 @@ redirect_from:
 
 Education
 ======
-* Ph.D. in Intelligent Systems Engineering, Indiana University, USA, 2022-2027 (expected)
+* Ph.D. in Computer Science, University of Illinois Urbana-Champaign, USA, 2024-Present
+* Ph.D. in Intelligent Systems Engineering, Indiana University, USA, 2022-2024
 * M.S. in Networking and Multimedia, National Taiwan University, Taiwan, 2016-2018
 * B.S. in Computer Science and Information Engineering, Chang Gung University, Taiwan, 2011-2015
 
 Work experience
 ======
-* 2022-Present: Research Assistant
+* 2024-Present: Research Assistant
+  * Siebel School of Computing and Data Science, University of Illinois Urbana-Champaign
+  * Advisor: [Prof. Minje Kim](https://minjekim.com/)
+  * Co-advisor: [Prof. Paris Smaragdis](https://paris.cs.illinois.edu/)
+
+* 2022-2024: Research Assistant
   * Department of Intelligent Systems Engineering, Indiana University 
-  * Supervisor: [Prof. Minje Kim](https://saige.sice.indiana.edu/)
+  * Advisor: [Prof. Minje Kim](https://saige.sice.indiana.edu/)
 
 * May-Aug 2023: Research Scientist Intern
   * Reality Labs Research Audio, Meta 
