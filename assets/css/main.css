@@ -3086,7 +3086,7 @@ input, select, textarea {
 	aspect-ratio: 1 / 1;       /* keep it square */
 	object-fit: contain;       /* no cropping; use 'cover' to crop */
 	border-radius: 10px;       /* round only the image */
-	background: #c1b2f3;          /* clean edge if PNG is transparent */
+	background: #ffffff;          /* clean edge if PNG is transparent */
 	display: block;
 	}
 
