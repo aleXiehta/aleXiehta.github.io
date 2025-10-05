@@ -3815,3 +3815,10 @@ input, select, textarea {
 
 		}
 
+/* === Academicons inside HTML5 UP's .icon wrapper === */
+/* Ensure Google Scholar (and other ai-* icons) use the Academicons font */
+.icon.ai:before,
+.icon[class*=" ai-"]:before {
+  font-family: "Academicons" !important;
+  font-weight: 400; /* Academicons uses normal weight */
+}
