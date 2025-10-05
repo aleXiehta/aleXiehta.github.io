@@ -3068,6 +3068,37 @@ input, select, textarea {
 	.spotlight .image {
 		border-color: rgba(255, 255, 255, 0.35);
 	}
+	/* === Publications spotlight variant (square thumbs with rounded corners) === */
+	.spotlight.spotlight--pubs { align-items: center; }
+
+	.spotlight.spotlight--pubs .image {
+	/* remove the circular frame from Stellar's default spotlight image */
+	border-radius: 0;
+	padding: 0;
+	border: 0;
+	/* image first, text second → put space on the right of the image */
+	margin: 0 2rem 0 0;
+	flex: 0 0 auto;
+	}
+
+	.spotlight.spotlight--pubs .image img {
+	width: 150px;              /* pick your size */
+	aspect-ratio: 1 / 1;       /* keep it square */
+	object-fit: contain;       /* no cropping; use 'cover' to crop */
+	border-radius: 10px;       /* round only the image */
+	background: #fff;          /* clean edge if PNG is transparent */
+	display: block;
+	}
+
+	@supports not (aspect-ratio: 1 / 1) {
+	.spotlight.spotlight--pubs .image img { height: 150px; } /* fallback */
+	}
+
+	@media screen and (max-width: 736px) {
+	.spotlight.spotlight--pubs .image { margin: 0 1.25rem 0 0; }
+	.spotlight.spotlight--pubs .image img { width: 120px; }
+	}
+
 
 /* Header */
 
@@ -3784,33 +3815,3 @@ input, select, textarea {
 
 		}
 
-/* === Publications spotlight variant (square thumbs with rounded corners) === */
-.spotlight.spotlight--pubs { align-items: center; }
-
-.spotlight.spotlight--pubs .image {
-  /* remove the circular frame from Stellar's default spotlight image */
-  border-radius: 0;
-  padding: 0;
-  border: 0;
-  /* image first, text second → put space on the right of the image */
-  margin: 0 2rem 0 0;
-  flex: 0 0 auto;
-}
-
-.spotlight.spotlight--pubs .image img {
-  width: 150px;              /* pick your size */
-  aspect-ratio: 1 / 1;       /* keep it square */
-  object-fit: contain;       /* no cropping; use 'cover' to crop */
-  border-radius: 10px;       /* round only the image */
-  background: #fff;          /* clean edge if PNG is transparent */
-  display: block;
-}
-
-@supports not (aspect-ratio: 1 / 1) {
-  .spotlight.spotlight--pubs .image img { height: 150px; } /* fallback */
-}
-
-@media screen and (max-width: 736px) {
-  .spotlight.spotlight--pubs .image { margin: 0 1.25rem 0 0; }
-  .spotlight.spotlight--pubs .image img { width: 120px; }
-}
