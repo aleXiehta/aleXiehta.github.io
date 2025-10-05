@@ -2413,6 +2413,16 @@ input, select, textarea {
 			.image.main img {
 				width: 100%;
 			}
+		/* Square, rounded thumbnails without rounding the outer wrapper */
+		.image.sq { border-radius: 0; }                  /* remove wrapper rounding */
+		.image.sq img {
+		width: 140px;                                  /* pick any size */
+		aspect-ratio: 1 / 1;                           /* keep it square */
+		object-fit: contain;                           /* no cropping; use 'cover' to crop edge-to-edge */
+		border-radius: 10px;                           /* rounded corners on the image itself */
+		background: #fff;                              /* clean edge if PNG is transparent */
+		display: block;
+		}
 
 /* List */
 
