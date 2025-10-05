@@ -3822,3 +3822,33 @@ input, select, textarea {
   font-family: "Academicons" !important;
   font-weight: 400; /* Academicons uses normal weight */
 }
+
+/* === Education cards with logos === */
+#edu .box .edu-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+#edu .edu-logo {
+  flex: 0 0 72px;      /* reserve space for the logo */
+}
+
+#edu .edu-logo img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain; /* keeps logos tidy even if aspect ratios differ */
+  border-radius: 8px;  /* subtle rounding to match theme */
+  display: block;
+  background: #ffffff; /* safe backdrop for transparent PNGs */
+}
+
+#edu .edu-body h3 {
+  margin-bottom: 0.25em;
+}
+
+/* Smaller logos on phones */
+@media screen and (max-width: 736px) {
+  #edu .edu-logo { flex-basis: 56px; }
+  #edu .edu-logo img { width: 56px; height: 56px; }
+}
