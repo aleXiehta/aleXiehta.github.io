@@ -3823,40 +3823,44 @@ input, select, textarea {
   font-weight: 400; /* Academicons uses normal weight */
 }
 
-/* === Education cards with logos (robust) === */
-#edu .box .edu-item {
+/* === Reuse the Education card layout for Research/Work (#exp) === */
+#edu .edu-item,
+#exp .edu-item {
   display: grid;
-  grid-template-columns: 72px 1fr;  /* logo | text */
-  column-gap: 1.25rem;
-  align-items: start;
+  grid-template-columns: 72px 1fr;
+  gap: 1.25rem;
+  align-items: start; /* text starts at top */
 }
 
-#edu .edu-logo {
+#edu .edu-logo,
+#exp .edu-logo {
   width: 72px;
   height: 72px;
-  align-self: center;
+  align-self: center;   /* center the logo vertically */
 }
 
-#edu .edu-logo img {
-  display: block;
+#edu .edu-logo img,
+#exp .edu-logo img {
   width: 100%;
   height: 100%;
-  object-fit: contain;   /* handle any aspect ratio */
-  background: #fff;      /* clean edge for transparent PNGs */
-  border-radius: 8px;
+  object-fit: contain;
+  display: block;
 }
 
-#edu .edu-body h3 { margin-bottom: 0.25em; }
+#edu .edu-body h3,
+#exp .edu-body h3 {
+  margin: 0 0 0.35rem 0;
+}
 
-/* Smaller logos on phones */
-/* @media screen and (max-width: 736px) {
-  #edu .box .edu-item { grid-template-columns: 56px 1fr; }
-  #edu .edu-logo { width: 56px; height: 56px; }
-} */
+#edu .edu-body p,
+#exp .edu-body p {
+  margin: 0.25rem 0 0 0;
+}
+
 @media screen and (max-width: 736px) {
-  #edu .edu-logo {
-    width: 56px;
-    height: 56px;
-    align-self: center;
-  }
+  #edu .edu-item,
+  #exp .edu-item { grid-template-columns: 56px 1fr; }
+  #edu .edu-logo,
+  #exp .edu-logo { width: 56px; height: 56px; }
 }
+
