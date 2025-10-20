@@ -25,12 +25,12 @@
             <br>
             <h1 class="mt-5 mb-3">AD-FlowTSE: Adaptive Discriminative Flow-Matching Target Speaker Extraction</h1>
             <p class="lead">
-                Tsun-An Hsieh <sup>1</sup>,
-                Minje Kim <sup>1</sup>
+                Tsun-An Hsieh and 
+                Minje Kim 
             </p>
 
             <p class="lead">
-                <sup>1</sup> University of Illinois Urbana-Champaign<br>
+                University of Illinois Urbana-Champaign<br>
             </p>
 
             <div>
@@ -55,17 +55,17 @@
                 Generative target speaker extraction (TSE) methods often produce more natural outputs than predictive models. Recent work based on diffusion or flow matching (FM) typically relies on a small, fixed number of reverse steps with a fixed step size. We introduce Adaptive Discriminative Flow Matching TSE (AD-FlowTSE), which extracts the target speech using an adaptive step size. We formulate TSE within the FM paradigm but, unlike prior FM-based speech enhancement and TSE approaches that transport between the mixture (or a normal prior) and the clean-speech distribution, we define the flow between the background and the source, governed by the mixing ratio (MR) of the source and background that creates the mixture. This design enables MR-aware initialization, that the model starts at an adaptive point along the background–source trajectory rather than applying the same reverse schedule across all noise levels. Experiments show that AD-FlowTSE achieves strong TSE with as few as a single step, and that incorporating auxiliary MR estimation further improves target speech accuracy. Together, these results highlight that aligning the transport path with the mixture composition and adapting the step size to noise conditions yields efficient and accurate TSE.
             </p>
             <br>
-            <img class="img-fluid" src="overview.png">
+            <div class="text-center">
+                <img src="overview.png" class="img-fluid" alt="Overview">
+            </div>
             <br>
             <br>
-            <!-- <p class="text-center">Figure 1: <em>
-                (Top) Illustration of a GFB in one-dimensional space. (Middle) A sequential display of spectrograms, showcasing the stages of audio signal transformation. (Bottom) Geometrical interpretation highlighting the mapping of data points through encoding and decoding within a Gaussian space.
-                </em></p> -->
+            <p class="text-center">Figure 1: <em>Overview of the AD-FlowTSE framework</em></p>
         </div>
     </div>
 
     <div class="section">
-        <h2 class="">Listening clean_samples</h2>
+        <h2 class="">Listening Samples</h2>
         <hr>
         <h3 class="">Libri2Mix Clean</h3>
 
