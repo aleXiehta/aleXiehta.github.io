@@ -1,0 +1,342 @@
+
+
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>ICASSP 2026 Demo Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta name="theme-color" content="#563d7c">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+<!-- Page Content -->
+<div class="text-center">
+    <div class="row">
+        <div class="col-lg-12">
+            <br>
+            <h1 class="mt-5 mb-3">AD-FlowTSE: Adaptive Discriminative Flow-Matching Target Speaker Extraction</h1>
+            <p class="lead">
+                Tsun-An Hsieh <sup>1</sup>,
+                Minje Kim <sup>1</sup>,
+            </p>
+
+            <p class="lead">
+                <sup>1</sup> University of Illinois Urbana-Champaign<br>
+            </p>
+
+            <div>
+                <a class="btn btn-outline-dark" href="#" target=”_blank” type="button">
+                    <i class="bi bi-newspaper"></i> Paper
+                </a>
+                <a class="btn btn-outline-dark" href="https://github.com/aleXiehta/AD-FlowTSE" target=”_blank” type="button">
+                    <i class="bi bi-code-slash"></i> Code
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="section mt-5 mb-5">
+        <div class="abstract">
+            <h2>Abstract</h2>
+            <hr>
+            <p>
+                Generative target speaker extraction (TSE) methods often produce more natural outputs than predictive models. Recent work based on diffusion or flow matching (FM) typically relies on a small, fixed number of reverse steps with a fixed step size. We introduce Adaptive Discriminative Flow Matching TSE (AD-FlowTSE), which extracts the target speech using an adaptive step size. We formulate TSE within the FM paradigm but, unlike prior FM-based speech enhancement and TSE approaches that transport between the mixture (or a normal prior) and the clean-speech distribution, we define the flow between the background and the source, governed by the mixing ratio (MR) of the source and background that creates the mixture. This design enables MR-aware initialization, that the model starts at an adaptive point along the background–source trajectory rather than applying the same reverse schedule across all noise levels. Experiments show that AD-FlowTSE achieves strong TSE with as few as a single step, and that incorporating auxiliary MR estimation further improves target speech accuracy. Together, these results highlight that aligning the transport path with the mixture composition and adapting the step size to noise conditions yields efficient and accurate TSE.
+            </p>
+            <br>
+            <img class="img-fluid" src="overview.png">
+            <br>
+            <br>
+            <!-- <p class="text-center">Figure 1: <em>
+                (Top) Illustration of a GFB in one-dimensional space. (Middle) A sequential display of spectrograms, showcasing the stages of audio signal transformation. (Bottom) Geometrical interpretation highlighting the mapping of data points through encoding and decoding within a Gaussian space.
+                </em></p> -->
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="">Listening clean_samples</h2>
+        <hr>
+        <h3 class="">Libri2Mix Clean</h3>
+
+        <div class="table-responsive">
+        <table class="table table-sm text-center align-middle">
+            <thead>
+            <tr>
+                <th class="audio-col">Mixture</th>
+                <th class="audio-col">Source</th>
+                <th class="audio-col">Estimated τ</th>
+                <th class="audio-col">Oracle τ</th>
+                <th class="audio-col">τ = 0</th>
+                <th class="audio-col">τ = 1</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <!-- Row 1 -->
+            <tr>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_samples/61-70968-0000_8455-210777-0012/mixture.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_samples/61-70968-0000_8455-210777-0012/source.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_samples/61-70968-0000_8455-210777-0012/estimation.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_samples/61-70968-0000_8455-210777-0012/gt.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_samples/61-70968-0000_8455-210777-0012/zero.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_samples/61-70968-0000_8455-210777-0012/one.wav" type="audio/wav">
+                </audio>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_samples/61-70968-0046_121-121726-0000/mixture.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_samples/61-70968-0046_121-121726-0000/source.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_samples/61-70968-0046_121-121726-0000/estimation.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_samples/61-70968-0046_121-121726-0000/gt.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_samples/61-70968-0046_121-121726-0000/zero.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_samples/61-70968-0046_121-121726-0000/one.wav" type="audio/wav">
+                </audio>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_clean_samples/237-126133-0022_3575-170457-0054/mixture.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_samples/237-126133-0022_3575-170457-0054/source.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_samples/237-126133-0022_3575-170457-0054/estimation.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_samples/237-126133-0022_3575-170457-0054/gt.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_samples/237-126133-0022_3575-170457-0054/zero.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_samples/237-126133-0022_3575-170457-0054/one.wav" type="audio/wav">
+                </audio>
+                </td>
+            </tr>
+            <!-- Duplicate <tr> blocks like above for more examples -->
+            </tbody>
+        </table>
+        </div>
+        <br>
+        <h3 class="">Libri2Mix Noisy</h3>
+
+        <div class="table-responsive">
+        <table class="table table-sm text-center align-middle">
+            <thead>
+            <tr>
+                <th class="audio-col">Mixture</th>
+                <th class="audio-col">Source</th>
+                <th class="audio-col">Estimated τ</th>
+                <th class="audio-col">Oracle τ</th>
+                <th class="audio-col">τ = 0</th>
+                <th class="audio-col">τ = 1</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <!-- Row 1 -->
+            <tr>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="noisy_samples/61-70968-0000_8455-210777-0012/mixture.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="noisy_samples/61-70968-0000_8455-210777-0012/source.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="noisy_samples/61-70968-0000_8455-210777-0012/estimation.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="noisy_samples/61-70968-0000_8455-210777-0012/gt.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="noisy_samples/61-70968-0000_8455-210777-0012/zero.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="noisy_samples/61-70968-0000_8455-210777-0012/one.wav" type="audio/wav">
+                </audio>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="noisy_samples/61-70968-0046_121-121726-0000/mixture.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="noisy_samples/61-70968-0046_121-121726-0000/source.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="noisy_samples/61-70968-0046_121-121726-0000/estimation.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="noisy_samples/61-70968-0046_121-121726-0000/gt.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="noisy_samples/61-70968-0046_121-121726-0000/zero.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="noisy_samples/61-70968-0046_121-121726-0000/one.wav" type="audio/wav">
+                </audio>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_samples/237-126133-0022_3575-170457-0054/mixture.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_samples/237-126133-0022_3575-170457-0054/source.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_samples/237-126133-0022_3575-170457-0054/estimation.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_samples/237-126133-0022_3575-170457-0054/gt.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_samples/237-126133-0022_3575-170457-0054/zero.wav" type="audio/wav">
+                </audio>
+                </td>
+                <td>
+                <audio controls preload="metadata" class="player">
+                    <source src="clean_samples/237-126133-0022_3575-170457-0054/one.wav" type="audio/wav">
+                </audio>
+                </td>
+            </tr>
+            <!-- Duplicate <tr> blocks like above for more examples -->
+            </tbody>
+        </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Citation</h2>
+        <hr>
+        <div style="background-color: #e9ecef;">
+  <pre><code>
+    @inproceedings{emoliner2024,
+        title={{Adaptive Deterministic Flow Matching for Target Speaker Extraction}},
+        author={Hsieh, Tsun-An and Kim, Minje},
+        journal={arXiv},
+        notes={Submitted to ICASSP 2026}
+    }
+  </code></pre>
+        </div>
+    </div>
+
+    <hr>
+</div>
+
+<!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+<script src="js/slider.js"></script>
+</body>
+
+</html>
