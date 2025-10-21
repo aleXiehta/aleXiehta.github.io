@@ -24,6 +24,22 @@
     <script id="MathJax-script" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
+
+    <style>
+        .player {
+            width: 180px;
+        }
+        .audio-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 1em;
+        }
+        td {
+            padding: 6px;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -76,12 +92,12 @@
     <div class="section">
         <h2 class="">Note on Audio Samples</h2>
         <p>
-            While some of our generated samples may not sound as “crisp” or high-fidelity as outputs from other generative speech models optimized for perceptual metrics such as DNSMOS, this difference can be attributed to the following factors:
+            While some of our generated samples may not sound as “crisp” or high-fidelity as outputs from other generative speech models, this difference can be attributed to the following factors:
         </p>
 
         <ul>
         <li>
-            <strong>Sampling rate:</strong> All experiments are conducted on <strong>16&nbsp;kHz data</strong>, which limits the perceptual bandwidth. This can also be heard in the original source mixtures.
+            <strong>Sampling rate:</strong> All experiments are conducted on <strong>16&nbsp;kHz data</strong>, which limits the perceptual bandwidth. This can be heard in the original source mixtures.
         </li>
         <li>
             <strong>Focus of our method:</strong> Our approach emphasizes <strong>accurate target speaker extraction</strong>, aiming to:
@@ -92,7 +108,15 @@
         </li>
         </ul>
 
-        <p></p>
+        <p>
+            Label explanations:
+            <ul>
+                <li><strong>$\hat{\tau}$</strong>: Estimated mixing ratio (MR) from the model.</li>
+                <li><strong>$\tau$</strong>: Ground-truth mixing ratio (MR) used for generating the mixture.</li>
+                <li><strong>$\tau=0$</strong>: The TSE model's behavior becomes unpredictable, such as switching to the background speaker.</li>
+                <li><strong>$\tau=1$</strong>: The TSE model outputs the mixture itself, because the step size is fixed to zero.</li>
+            </ul>
+        </p>
 
         <h2 class="">Listening Samples</h2>
         <h3 class="">Libri2Mix Clean</h3>
