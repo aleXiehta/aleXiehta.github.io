@@ -15,6 +15,15 @@
     <meta name="theme-color" content="#563d7c">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <script>
+        MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 </head>
 
 <body>
@@ -65,8 +74,27 @@
     </div>
 
     <div class="section">
+        <h2 class="">Note on Audio Samples</h2>
+        <p>
+            While some of our generated samples may not sound as “crisp” or high-fidelity as outputs from other generative speech models optimized for perceptual metrics such as DNSMOS, this difference can be attributed to the following factors:
+        </p>
+
+        <ul>
+        <li>
+            <strong>Sampling rate:</strong> All experiments are conducted on <strong>16&nbsp;kHz data</strong>, which limits the perceptual bandwidth. This can also be heard in the original source mixtures.
+        </li>
+        <li>
+            <strong>Focus of our method:</strong> Our approach emphasizes <strong>accurate target speaker extraction</strong>, aiming to:
+            <ul>
+            <li>preserve <strong>speaker identity</strong> (high SIM), and</li>
+            <li>achieve <strong>strong speech reconstruction quality</strong> (high SI-SDR).</li>
+            </ul>
+        </li>
+        </ul>
+
+        <p></p>
+
         <h2 class="">Listening Samples</h2>
-        <hr>
         <h3 class="">Libri2Mix Clean</h3>
 
         <div class="table-responsive">
@@ -75,10 +103,10 @@
             <tr>
                 <th class="audio-col">Mixture</th>
                 <th class="audio-col">Source</th>
-                <th class="audio-col">Estimated τ</th>
-                <th class="audio-col">Oracle τ</th>
-                <th class="audio-col">τ = 0</th>
-                <th class="audio-col">τ = 1</th>
+                <th class="audio-col">Estimated $\hat{\tau}$</th>
+                <th class="audio-col">Oracle $\tau$</th>
+                <th class="audio-col">$\tau$ = 0</th>
+                <th class="audio-col">$\tau$ = 1</th>
             </tr>
             </thead>
             <tbody>
@@ -195,10 +223,10 @@
             <tr>
                 <th class="audio-col">Mixture</th>
                 <th class="audio-col">Source</th>
-                <th class="audio-col">Estimated τ</th>
-                <th class="audio-col">Oracle τ</th>
-                <th class="audio-col">τ = 0</th>
-                <th class="audio-col">τ = 1</th>
+                <th class="audio-col">Estimated $\hat{\tau}$</th>
+                <th class="audio-col">Oracle $\tau$</th>
+                <th class="audio-col">$\tau$ = 0</th>
+                <th class="audio-col">$\tau$ = 1</th>
             </tr>
             </thead>
             <tbody>
